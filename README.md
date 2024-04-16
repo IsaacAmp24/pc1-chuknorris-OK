@@ -1,27 +1,51 @@
-# Pc1ChuknorrisOK
+# Pasos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+## Crear los bounded context public y norris
 
-## Development server
+### En la carpeta norris: 
+  - Crear la carpeta components y el componente components/cards
+  - Crear la carpeta model y el Entity (son los valores del API: id, description, etc)
+  - Crear la carpeta services y los servicios services/norris-api}
+
+  
+### En la carpeta public:
+  - Crear el componente footer-content
+  - Crear el componente toolbar-content
+
+
+### Carpeta norris/services
+
+- .ts:
+  - se encarga de hacer las llamadas al API
+  - se usa el HttpClient
+  - se usa el Observable
+  - se definen los metodos que seran usados posteriormmente en el componente cards
+
+## Carpeta norris/components/cards
+
+- .ts:
+  - se encarga de hacer las llamadas al servicio y de recibir los datos
+  - se usa el OnInit
+  - se usa el servicio norris-api
+
+## Carpeta public/components/footer-content
+
+- .html:
+  - se encarga de mostrar el footer
+  
+- .css:
+  - se encarga de darle estilo al footer
+  
+## Carpeta public/components/toolbar-content
+
+- .html:
+  - se encarga de mostrar el toolbar
+
+- .css:
+  - se encarga de darle estilo al toolbar.
+
+## Para ejecutar:
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

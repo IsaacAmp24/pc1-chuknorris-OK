@@ -1,0 +1,16 @@
+<p>All Joker information!</p>
+
+<!-- Deja el atributo cols como está -->
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let card of cardContent" >
+    <mat-card class="joke-card">
+      <mat-card-header>
+        <mat-card-title>Category: {{card.category}}</mat-card-title>
+        <mat-card-subtitle>Id: {{card.jokeId}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        Valor: {{card.value}}
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
